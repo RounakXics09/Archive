@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Sponsers from '../widgets/homeComponents/Sponsers'
 import NewsLetter from '../widgets/homeComponents/NewsLetter'
 import { Box, Grid2 } from '@mui/material'
@@ -7,8 +7,30 @@ import BlogCard from '../components/BlogCard'
 import Category from '../widgets/details/Category'
 import PopularTags from '../widgets/details/PopularTags'
 import PopularPosts from '../widgets/details/PopularPosts'
+import axios from 'axios';
 
 function Blog() {
+
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('localhost:1337/api/blogs');
+        setData(response.data);
+        console.log(response.data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <Box className='width-100 method-container' sx={{ padding: "2rem 0", maxWidth: "1200px", margin: "0 auto" }}>
       <CommonHeaderContent data={{ linkName: 'Home /  Blog', name: 'Blog', description: 'Powerful project management tools for your companies of all sizes.' }} />
