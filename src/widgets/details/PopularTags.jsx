@@ -12,7 +12,7 @@ function PopularTags() {
                     {
                         tags.map((e,i) => {
                             return(
-                                <div className='tags-chips'>{e}</div>
+                                <div key={i} className='tags-chips'>{e}</div>
                             )
                         })
                     }

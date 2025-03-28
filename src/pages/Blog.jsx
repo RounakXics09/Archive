@@ -11,19 +11,21 @@ import axios from 'axios';
 
 function Blog() {
 
-  const [data, setData] = useState(null);
+  const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('localhost:1337/api/blogs');
-        setData(response.data);
-        console.log(response.data);
+        const response = await axios.get('http://localhost:1337/api/blogs?populate=*');
+        console.log(response.data.data);
+        setData(response.data.data);
       } catch (err) {
+        console.log(err.message);
         setError(err.message);
       } finally {
+        console.log('finally');
         setLoading(false);
       }
     };
@@ -38,10 +40,10 @@ function Blog() {
         <Grid2 size={{ xs: 12, md: 9, lg: 9, xl: 9 }}>
           <Grid2 container columnSpacing={8} rowSpacing={5}>
             {
-              [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((e) => {
+              data?.map((e, i) => {
                 return (
-                  <Grid2 size={{ xs: 12, md: 6, lg: 6, xl: 6 }} spacing={5}>
-                    <BlogCard />
+                  <Grid2 key={i} size={{ xs: 12, md: 6, lg: 6, xl: 6 }} rowSpacing={5} columnSpacing={5}>
+                    <BlogCard data={e} />
                   </Grid2>
                 )
               })
