@@ -19,66 +19,66 @@ const pages = [
 
 const projects = {
   All: [
-    { 
-      img: Purple, 
-      title: "Purple Project", 
+    {
+      img: Purple,
+      title: "Purple Project",
       description: "Brand Identity",
       category: "Project Management Website Design",
       ctaText: "Learn More"
     },
-    { 
-      img: Yellow, 
-      title: "Yellow Project", 
+    {
+      img: Yellow,
+      title: "Yellow Project",
       description: "UI/UX Design",
       category: "Project Management Website Design",
       ctaText: "Learn More"
     },
-    { 
-      img: Blue, 
-      title: "Blue Project", 
+    {
+      img: Blue,
+      title: "Blue Project",
       description: "Development",
       category: "Project Management Website Design",
-      ctaText: "Learn More" 
+      ctaText: "Learn More"
     },
-    { 
-      img: Pink, 
-      title: "Pink Project", 
+    {
+      img: Pink,
+      title: "Pink Project",
       description: "Illustration",
       category: "Project Management Website Design",
       ctaText: "Learn More"
     },
   ],
   Brand: [
-    { 
-      img: Purple, 
-      title: "Purple Project", 
+    {
+      img: Purple,
+      title: "Purple Project",
       description: "Brand Identity",
       category: "Project Management Website Design",
       ctaText: "Learn More"
     },
   ],
   "UI/UX Design": [
-    { 
-      img: Yellow, 
-      title: "Yellow Project", 
+    {
+      img: Yellow,
+      title: "Yellow Project",
       description: "UI/UX Design",
       category: "Project Management Website Design",
       ctaText: "Learn More"
     },
   ],
   Development: [
-    { 
-      img: Blue, 
-      title: "Blue Project", 
+    {
+      img: Blue,
+      title: "Blue Project",
       description: "Development",
       category: "Project Management Website Design",
       ctaText: "Learn More"
     },
   ],
   Illustration: [
-    { 
-      img: Pink, 
-      title: "Pink Project", 
+    {
+      img: Pink,
+      title: "Pink Project",
       description: "Illustration",
       category: "Project Management Website Design",
       ctaText: "Learn More"
@@ -94,29 +94,16 @@ function LatestWork() {
     <Box className="method-container" sx={{ padding: "2rem 0", maxWidth: "1200px", margin: "0 auto" }}>
       {/* Heading */}
       <Box sx={{ textAlign: "center", marginBottom: "3rem" }}>
-        <h1 style={{ 
-          fontSize: "2.5rem", 
-          fontWeight: "700",
-          margin: "0",
-          padding: "0"
-        }}>
+        <div className="method-heading">
           <span>Our </span>
-          <span style={{ 
-            position: "relative", 
-            display: "inline-block" 
+          <span style={{
+            position: "relative",
+            display: "inline-block"
           }}>
             Latest Works
-            <span style={{ 
-              position: "absolute",
-              bottom: "-10px",
-              left: "0",
-              width: "100%",
-              height: "4px",
-              backgroundColor: "#FFD700",
-              borderRadius: "2px"
-            }}></span>
+            <span className='text-overflow-border-yellow-line-10'></span>
           </span>
-        </h1>
+        </div>
       </Box>
 
       {/* Category Menu */}
@@ -174,16 +161,16 @@ function LatestWork() {
                       type: "spring",
                       stiffness: 100,
                     }}
-                    whileHover={{ 
+                    whileHover={{
                       y: -8,
                       boxShadow: "0px 10px 25px rgba(0, 0, 0, 0.12)"
                     }}
                     style={{
-                      backgroundColor: 
+                      backgroundColor:
                         project.title === "Purple Project" ? "#f8f8ff" :
-                        project.title === "Yellow Project" ? "#fffff8" :
-                        project.title === "Blue Project" ? "#f0f8ff" :
-                        project.title === "Pink Project" ? "#fff5f8" : "#ffffff",
+                          project.title === "Yellow Project" ? "#fffff8" :
+                            project.title === "Blue Project" ? "#f0f8ff" :
+                              project.title === "Pink Project" ? "#fff5f8" : "#ffffff",
                       borderRadius: "16px",
                       overflow: "hidden",
                       height: "100%",
@@ -195,8 +182,8 @@ function LatestWork() {
                     }}
                   >
                     {/* Image Container - With proper aspect ratio */}
-                    <div style={{ 
-                      position: "relative", 
+                    <div style={{
+                      position: "relative",
                       paddingTop: "65%", // 16:9 aspect ratio 
                       overflow: "hidden"
                     }}>
@@ -215,7 +202,7 @@ function LatestWork() {
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.4 }}
                       />
-                      
+
                       {/* Category badge overlaid on image */}
                       <div style={{
                         position: "absolute",
@@ -235,9 +222,9 @@ function LatestWork() {
                     </div>
 
                     {/* Card Content with improved typography */}
-                    <Box sx={{ 
-                      padding: "1.5rem", 
-                      display: "flex", 
+                    <Box sx={{
+                      padding: "1.5rem",
+                      display: "flex",
                       flexDirection: "column",
                       flex: 1
                     }}>
@@ -261,16 +248,16 @@ function LatestWork() {
                           {project.category}
                         </p>
                       </Box>
-                      
-                      <Box sx={{ 
-                        marginTop: "auto", 
-                        display: "flex", 
-                        justifyContent: "flex-end" 
+
+                      <Box sx={{
+                        marginTop: "auto",
+                        display: "flex",
+                        justifyContent: "flex-end"
                       }}>
                         <Button
                           size="small"
-                          sx={{ 
-                            fontSize: "0.875rem", 
+                          sx={{
+                            fontSize: "0.875rem",
                             fontWeight: "500",
                             color: "#6C63FF",
                             textTransform: "none",

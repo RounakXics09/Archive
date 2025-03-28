@@ -67,23 +67,11 @@ function OurTeam(props) {
     <Box className="method-container" sx={{ padding: "2rem 0", maxWidth: "1200px", margin: "0 auto" }}>
       <Box className="div-center p-20 d-flex-col">
       <Grid className='div-center'>
-        <div className='method-heading' style={{ 
-          fontSize: '2.5rem', 
-          fontWeight: 'bold',
-          marginBottom: '20px'
-        }}>
+        <div className="method-heading">
           <span style={{ paddingRight: '10px' }}>Meet Our</span>
           <span style={{ position: 'relative' }}>
             Team
-            <span className='text-overflow-border-yellow-line' style={{
-              position: 'absolute',
-              bottom: '-5px',
-              left: 0,
-              width: '100%',
-              height: '4px',
-              backgroundColor: '#FFD54F',
-              borderRadius: '2px'
-            }}></span>
+            <span className='text-overflow-border-yellow-line-10'></span>
           </span>
         </div>
       </Grid>

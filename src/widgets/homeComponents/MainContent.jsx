@@ -24,10 +24,10 @@ function MainContent() {
         </motion.div>
 
         <div className='main-content-text-container'>
-  <span className='main-content-text hero-text'>All-in-One</span>
-  <span className='main-content-span hero-text' style={{ fontWeight: 'bold' }}>IT Services</span>
-  <span className='main-content-text hero-text'>Empowering Businesses</span>
-</div>
+          <span className='main-content-text hero-text'>All-in-One</span>
+          <span className='main-content-span hero-text' style={{ fontWeight: 'bold' }}>IT Services</span>
+          <span className='main-content-text hero-text'>Empowering Businesses</span>
+        </div>
 
         <motion.div
           className='display-sm-none'
