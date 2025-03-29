@@ -42,7 +42,7 @@ function Blog() {
             {
               data?.map((e, i) => {
                 return (
-                  <Grid2 key={i} size={{ xs: 12, md: 6, lg: 6, xl: 6 }} rowSpacing={5} columnSpacing={5}>
+                  <Grid2 key={i} size={{ xs: 12,sm:6, md: 6, lg: 6, xl: 6 }} rowSpacing={5} columnSpacing={5} className="div-center">
                     <BlogCard data={e} />
                   </Grid2>
                 )

@@ -15,10 +15,10 @@ function BlogCard(props) {
 
 
   return (
-    <Grid2>
+    <Grid2 sx={{maxWidth:'350px',maxHeight:'550px'}}>
       <Grid2>
         <div style={{ position: 'relative' }}>
-          <img src={`http://localhost:1337${data?.blog_image?.url}`} alt="Logo1" style={{ width: '100%' }} />
+          <img src={`http://localhost:1337${data?.blog_image?.url}`} alt="Logo1" style={{ width: '100%',height:'100%' }} />
           <div style={{ position: 'absolute', top: '20px', left: '20px' }}>
             <div className='blog-date'>{moment(data?.blog_date).format('DD')}
               <br />
