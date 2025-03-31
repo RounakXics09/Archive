@@ -15,14 +15,16 @@ function BlogCard(props) {
 
 
   return (
-    <Grid2 sx={{maxWidth:'350px',maxHeight:'550px'}}>
+    <Grid2 sx={{ maxWidth: '362px', maxHeight: '550px' }}>
       <Grid2>
         <div style={{ position: 'relative' }}>
-          <img src={`http://localhost:1337${data?.blog_image?.url}`} alt="Logo1" style={{ width: '100%',height:'100%' }} />
+          <Grid2 className='div-center' sx={{ width: '100%', height: '280px',overflow: 'hidden', borderRadius: '15px' }}>
+            <img src={`http://localhost:1337${data?.blog_image?.url}`} alt="Logo1" style={{ width: '100%', height: '100%', objectFit:'cover' }} />
+          </Grid2>
           <div style={{ position: 'absolute', top: '20px', left: '20px' }}>
-            <div className='blog-date'>{moment(data?.blog_date).format('DD')}
+            <div className='blog-date'>{moment(data?.createdAt).format('DD')}
               <br />
-              <span className='text-span'>{moment(data?.blog_date).format('MMM')}</span>
+              <span className='text-span'>{moment(data?.createdAt).format('MMM')}</span>
             </div>
           </div>
         </div>

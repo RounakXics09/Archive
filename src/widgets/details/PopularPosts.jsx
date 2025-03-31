@@ -27,7 +27,7 @@ function PopularPosts() {
                                 <ListItemAvatar sx={{ margin: '0px' }} className='div-center'>
                                     <img src={popularIcon} alt="Logo" style={{ width: '54px', height: '54px' }} />
                                 </ListItemAvatar>
-                                {/* <ListItemText sx={{ paddingLeft: '10px' }}
+                                <ListItemText sx={{ paddingLeft: '10px' }}
                                     primary={
                                         <React.Fragment>
                                             <Typography
@@ -49,7 +49,7 @@ function PopularPosts() {
                                             </Typography>
                                         </React.Fragment>
                                     }
-                                /> */}
+                                />
                             </ListItem>
                         )
                     })}
